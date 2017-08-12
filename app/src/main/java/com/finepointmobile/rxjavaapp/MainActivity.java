@@ -1,9 +1,12 @@
 package com.finepointmobile.rxjavaapp;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.finepointmobile.rxjavaapp.model.User;
 
@@ -21,12 +24,24 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String URL = "https://jsonplaceholder.typicode.com/";
 
+    FloatingActionButton mFab;
+    TextView mMessage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
+        mMessage = (TextView) findViewById(R.id.message);
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMessage.setText(":)");
+            }
+        });
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(URL)

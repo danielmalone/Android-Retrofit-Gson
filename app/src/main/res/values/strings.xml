@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RxJavaApp</string>
     <string name="action_settings">Settings</string>
+
+    <!--home screen-->
+    <string name="default_message">Hello World!</string>
 </resources>

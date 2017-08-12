@@ -24,5 +24,7 @@ public class ExampleUnitTest {
         user.setEmail("daniel@finepointmobile.com");
 
         assertEquals("Daniel Malone", user.getName());
+
+        assertEquals("daniel@finepointmobile.com", user.getEmail());
     }
 }
