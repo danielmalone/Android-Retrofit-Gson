@@ -1,5 +1,9 @@
 package com.finepointmobile.rxjavaapp;
 
+import com.finepointmobile.rxjavaapp.model.User;
+
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 
@@ -9,6 +13,6 @@ import retrofit2.http.GET;
 
 public interface EndpointsInterface {
 
-    @GET("data/2.5/forecast?id=524901&APPID=4d33171b9b0ba97adf4b81aa48b0dd70")
-    Call<com.finepointmobile.rxjavaapp.CurrentWeather> getCurrentWeather();
+    @GET("users")
+    Call<List<User>> getAllUsers();
 }
